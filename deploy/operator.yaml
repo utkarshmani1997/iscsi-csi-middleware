@@ -31,3 +31,7 @@ spec:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
               value: "iscsi-operator"
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName

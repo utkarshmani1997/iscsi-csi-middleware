@@ -67,6 +67,12 @@ func main() {
 
 	printVersion()
 
+	nodeName := os.Getenv("NODE_NAME")
+	if nodeName == "" {
+		log.Error(fmt.Errorf("NODE_NAME env not set"), "Failed to get Node name from env")
+		os.Exit(1)
+	}
+
 	namespace, err := k8sutil.GetWatchNamespace()
 	if err != nil {
 		log.Error(err, "Failed to get watch namespace")
