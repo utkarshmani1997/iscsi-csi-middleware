@@ -1,0 +1,7 @@
+apiVersion: openebs.io/v1alpha1
+kind: ISCSIConnection
+metadata:
+  name: example-iscsiconnection
+spec:
+  # Add fields here
+  size: 3
